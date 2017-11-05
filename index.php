@@ -14,7 +14,10 @@
         function schieten(m){
             
             console.log (m);
-            document.getElementById("knop"+m).value = "test2";
+            
+            //document.getElementById("knop"+m).value = "test2";
+            document.getElementById("knop"+m).style.background = "red";
+            
             
         }
         
@@ -32,15 +35,17 @@
 
     <?php
     
-    
+     
         for($x = 0; $x < 10; $x++) {
             
+            echo"<br>";
+            for($y = 0; $y < 10; $y++) {
            
-          
+                $id= $x.$y;
             
-            echo "<input onclick=schieten(".$x.") type=button value=test1 id=knop".$x." >";
+            echo "<input onclick=schieten(".$id.") type=button id=knop".$id." >";
             
-           
+            }
         }    
             
             
